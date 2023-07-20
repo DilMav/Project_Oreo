@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Орео-магаз</title>
+</head>
+<body>
+<h1>Главная</h1>
+
+<form action="search" method="post">
+    {% csrf_token %}
+        <input type="text" name="search_product">
+        <button>Поиск</button>
+</form>
+
+
+<a href="/about-us">О сайте</a>
+<a href="/contacts">Наши контакты</a>
+</body>
+</html>

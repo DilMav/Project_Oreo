@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+</head>
+<body>
+{% for i in cart %}
+<h1>{{ i.user_product }}</h1>
+<h1>{{ i.user_product.product_price }}</h1>
+<h1>{{ i.user_product_amount }}</h1>
+<a href ="/del_item/{{ i.user_product.id }}"><i></i></a>
+
+<form method="POST">
+    {%csrf_token %}
+    <button>Оформить заказ</button>
+</form>
+</body>
+</html>

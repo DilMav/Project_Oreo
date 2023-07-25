@@ -17,7 +17,7 @@ def home_page(request):
         'product': product_info,
         'category': category_info}
 
-    return render(request, 'index.html', context)
+    return render(request, 'index.html', 'context')
 
 def search_product(request):
     if request.method == 'POST':
